@@ -10,8 +10,11 @@ const WINNING_COMBINATIONS = [
 	[0, 4, 8],
 	[2, 4, 6]
 ]
-document.querySelector('#1').addEventListener(click, addXOrO)
+
+
+
+document.getElementById('1').addEventListener('click', addXOrO)
 
 function addXOrO(){
-    console.log('x')
+    document.getElementById('1').innerText='X'
 }
