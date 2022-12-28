@@ -16,6 +16,7 @@ localStorage.clear()
 localStorage.setItem("Player's Turn", PLAYER_X_CLASS)
 
 document.getElementById('1').addEventListener('click', addXOrO)
+document.getElementById('reset').addEventListener('click', clearBoard)
 
 function addXOrO(){
 	if((localStorage.getItem("Player's Turn") === PLAYER_X_CLASS)){
@@ -31,4 +32,9 @@ function addXOrO(){
 
 }
 
-
+function clearBoard(){
+	localStorage.clear()
+	document.getElementById('1').innerHTML = ''
+	console.log('reset clicked')
+	localStorage.setItem("Player's Turn", PLAYER_X_CLASS)
+}
