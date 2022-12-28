@@ -1,5 +1,5 @@
-const PLAYER_X_CLASS = 'x'
-const PLAYER_O_CLASS = 'o'
+const PLAYER_X_CLASS = 'X'
+const PLAYER_O_CLASS = 'O'
 const WINNING_COMBINATIONS = [
 	[0, 1, 2],
 	[3, 4, 5],
