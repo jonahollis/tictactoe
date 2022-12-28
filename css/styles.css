@@ -4,6 +4,10 @@
     font-family: 'Courier New', Courier, monospace
 }
 
+body {
+    color: #fff;
+}
+
 .background {
     background-color: #12181B;
     height: 100vh;
