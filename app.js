@@ -20,11 +20,11 @@ document.getElementById('reset').addEventListener('click', clearBoard)
 
 function addXOrO(){
 	if((localStorage.getItem("Player's Turn") === PLAYER_X_CLASS)){
-		console.log('it works!')
+		console.log('Player X makes move!')
 		document.getElementById('1').innerText = PLAYER_X_CLASS
 		localStorage.setItem("Player's Turn", PLAYER_O_CLASS)
 	}else if((localStorage.getItem("Player's Turn") === PLAYER_O_CLASS)){
-		console.log('it works!')
+		console.log('Player O makes move!')
 		document.getElementById('1').innerText = PLAYER_O_CLASS
 		localStorage.setItem("Player's Turn", PLAYER_X_CLASS)
 	}
