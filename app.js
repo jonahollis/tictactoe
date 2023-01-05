@@ -1,7 +1,3 @@
-// ideas to solve:
-// each tile must be assigned a variable in js
-// each time player takes turn, tile value pushed to array assigned to player x or o
-// each move must be checked against winning combinations to determine if player x or o has won before allowing next move
 
 const PLAYER_X_CLASS = 'X'
 const PLAYER_O_CLASS = 'O'
