@@ -1,3 +1,4 @@
+//---------------constants---------------------//
 const PLAYER_X_CLASS = 'X'
 const PLAYER_O_CLASS = 'O'
 const WINNING_COMBINATIONS = [
