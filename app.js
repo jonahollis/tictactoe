@@ -17,22 +17,25 @@ const winningConditions = [
   [2, 4, 6]
 ];
 
-
 function play(cell, index) {
 	if(cell.id !== 'reset'){
-		board[index] = currentPlayer;
-		cell.innerText = currentPlayer;
-		document.getElementById('player-turn').innerText = `Player ${currentPlayer}'s Turn`
-		cell.disabled = true;
+		board[index] = currentPlayer
+		cell.innerText = currentPlayer
+		cell.disabled = true
 
 		if (checkWin()) {
-			alert(currentPlayer + ' wins!');
-			reset();
+			//alert(currentPlayer + ' wins!');
+			document.querySelector('#game-over').classList.toggle('visually-hidden')
+			document.querySelector('#game-over').innerText = `Player ${currentPlayer} wins!`
+			
 		} else if (board.every(cell => cell !== '')) {
-			alert('Tie game!');
-			reset();
+			//alert('Tie game!');
+			document.querySelector('#game-over').classList.toggle('visually-hidden')
+			document.querySelector('#game-over').innerText = 'Tie game!'
+			
 		} else {
-			currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+			currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+			document.getElementById('player-turn').innerText = `Player ${currentPlayer}'s Turn`
 		}
 	}else{
 		reset()
@@ -44,18 +47,19 @@ function checkWin() {
   return winningConditions.some(condition => {
 	return condition.every(index => {
 	  return board[index] === currentPlayer;
-	});
-  });
+	})
+  })
 }
 
 function reset() {
-  board.fill('');
-  currentPlayer = 'X';
+  document.querySelector('#game-over').classList.toggle('visually-hidden')
+  board.fill('')
+  currentPlayer = 'X'
   document.querySelectorAll('button').forEach(button => {
-	button.innerText = '';
-	button.disabled = false;
+	button.innerText = ''
+	button.disabled = false
   })
-  document.getElementById('reset').innerText = 'Reset';
+  document.getElementById('reset').innerText = 'Reset'
 }
 
 
