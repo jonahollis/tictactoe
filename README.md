@@ -4,7 +4,7 @@
 ## About this Project
 Simple tic-tac-toe game written in JavaScript and styled with Bootstrap.
 
--  [Live Link](https://toxin-finder.netlify.app/)
+-  [Live Link](https://tic-tac-toe-simple-js-html-css.netlify.app/)
 
 ## Tools used
 
