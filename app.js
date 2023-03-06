@@ -4,7 +4,6 @@ document.querySelectorAll('button').forEach(button => {
 	});
 });
 
-
 let currentPlayer = 'X';
 const board = ['', '', '', '', '', '', '', '', ''];
 const winningConditions = [
